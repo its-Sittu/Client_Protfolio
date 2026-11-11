@@ -2164,13 +2164,13 @@ html.light-mode #contact .bg-slate-800\/80:hover {
 /* 1. Global Viewport & Smooth Scrolling */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;

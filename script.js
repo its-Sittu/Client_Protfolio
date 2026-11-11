@@ -50,28 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.drawImage(img, dx, dy, dw, dh);
     }
 
-    // Sudden yet smooth right-shift trigger:
-    // Text stays stably on the left during image scrubbing,
-    // and smoothly glides to the right side ONLY when the 300-frame sequence finishes!
+    // Text stays stably in clean executive position without abrupt jumps
     function updateTextShiftState(frameIdx) {
       if (!heroTextBlock || !heroTextWrapper) return;
-      if (window.innerWidth >= 768) {
-        // Trigger right shift as image sequence reaches completion (frame 235+)
-        const shouldShift = frameIdx >= 235;
-        if (shouldShift !== isShiftedToRight) {
-          isShiftedToRight = shouldShift;
-          if (isShiftedToRight) {
-            const wrapperWidth = heroTextWrapper.clientWidth;
-            const blockWidth = heroTextBlock.offsetWidth;
-            const maxShift = Math.max(0, wrapperWidth - blockWidth);
-            heroTextBlock.style.transform = 'translate3d(' + maxShift.toFixed(2) + 'px, 0, 0)';
-          } else {
-            heroTextBlock.style.transform = 'translate3d(0, 0, 0)';
-          }
-        }
-      } else {
-        heroTextBlock.style.transform = 'translate3d(0, 0, 0)';
-      }
+      heroTextBlock.style.transform = 'translate3d(0, 0, 0)';
     }
 
     function resizeHeroCanvas() {
@@ -132,18 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
-    // Scroll calculation
+    // Scroll calculation - smooth scrubbing as hero section is viewed and scrolled past
     function handleScrollScrubbing() {
       const rect = homeSection.getBoundingClientRect();
       const scrollDist = -rect.top;
-      const scrollRange = homeSection.offsetHeight - window.innerHeight;
+      const scrollRange = Math.max(window.innerHeight * 0.85, homeSection.offsetHeight * 0.85);
 
       if (scrollDist <= 0) {
         targetFrame = 1;
       } else if (scrollDist >= scrollRange) {
         targetFrame = totalFrames;
       } else {
-        const progress = scrollDist / scrollRange;
+        const progress = Math.min(1, Math.max(0, scrollDist / scrollRange));
         targetFrame = Math.max(1, Math.min(totalFrames, Math.round(progress * (totalFrames - 1)) + 1));
       }
     }

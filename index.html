@@ -193,86 +193,81 @@
 
   <main>
     <!-- ==================== 1. HERO SECTION WITH CINEMATIC 300-FRAME SMOOTH SCROLL ==================== -->
-    <section id="home" class="relative h-[320vh]">
-      <!-- Sticky Full-Screen Viewport Container -->
-      <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-4 sm:pb-6">
-        
-        <!-- Background 300-Frame Canvas -->
-        <canvas id="heroCanvas" class="absolute inset-0 w-full h-full object-cover z-0"></canvas>
-        
-        <!-- Fallback Poster Image (Before Canvas draws first frame) -->
-        <img id="heroFallback" src="assets/frames/ezgif-frame-001.jpg" alt="Anurag Tiwari Managing Director" class="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 pointer-events-none">
+    <section id="home" class="relative min-h-screen w-full overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-4 sm:pb-6">
+      <!-- Background 300-Frame Canvas -->
+      <canvas id="heroCanvas" class="absolute inset-0 w-full h-full object-cover z-0"></canvas>
+      
+      <!-- Fallback Poster Image (Before Canvas draws first frame) -->
+      <img id="heroFallback" src="assets/frames/ezgif-frame-001.jpg" alt="Anurag Tiwari Managing Director" class="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 pointer-events-none">
 
-        <!-- Ultra-Clean Subtle Luxury Overlays: Maximizes Canvas Brightness & 4K Crisp Clarity on Both Sides -->
-        <div id="heroOverlayGrad1" class="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/40 z-[1] pointer-events-none transition-all duration-500"></div>
-        <div id="heroOverlayGrad2" class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent z-[1] pointer-events-none transition-all duration-500"></div>
+      <!-- Ultra-Clean Subtle Luxury Overlays: Maximizes Canvas Brightness & 4K Crisp Clarity on Both Sides -->
+      <div id="heroOverlayGrad1" class="absolute inset-0 bg-gradient-to-r from-slate-950/40 via-transparent to-slate-950/40 z-[1] pointer-events-none transition-all duration-500"></div>
+      <div id="heroOverlayGrad2" class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent z-[1] pointer-events-none transition-all duration-500"></div>
 
-        <div class="relative z-10 max-w-[94rem] mx-auto px-4 sm:px-8 lg:px-12 w-full flex-1 flex flex-col justify-between py-2 sm:py-4">
-          
-          <!-- Center Executive Brand Column (Pure Clean Typography - Smooth Left-to-Right Translation) -->
-          <div id="heroTextWrapper" class="my-auto pt-4 sm:pt-6 w-full relative">
-            <div id="heroTextBlock" class="w-full max-w-md lg:max-w-lg xl:max-w-xl">
-              <!-- Big Bold Heading (Executive Managing Director Branding) -->
-              <div class="mb-2 sm:mb-4">
-                <h1 class="hero-heading font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-white leading-[1.03] mb-3">
-                  Managing<br>
-                  <span class="text-amber-400">Director</span>
-                </h1>
-                <p class="font-display font-bold text-base sm:text-lg lg:text-xl text-white tracking-wide uppercase mb-1.5 drop-shadow">
-                  ANURAG TIWARI &bull; <span class="text-amber-400 font-semibold">M/s M.S. Construction</span>
-                </p>
-                <p class="font-jost text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 text-amber-300 drop-shadow">
-                  Civil Engineer &bull; M.Tech (Construction Management) &bull; KIIT Alumnus
-                </p>
-                <p class="text-slate-200 text-xs sm:text-sm lg:text-base font-normal leading-relaxed drop-shadow-md">
-                  Directing high-capacity highway construction, road development, railway infrastructure, and large-scale infrastructure projects across India with technical precision and disciplined execution.
-                </p>
-              </div>
+      <div class="relative z-10 max-w-[94rem] mx-auto px-4 sm:px-8 lg:px-12 w-full flex-1 flex flex-col justify-between py-2 sm:py-4">
+        
+        <!-- Center Executive Brand Column (Pure Clean Typography - Smooth Left-to-Right Translation) -->
+        <div id="heroTextWrapper" class="my-auto pt-4 sm:pt-6 w-full relative">
+          <div id="heroTextBlock" class="w-full max-w-md lg:max-w-lg xl:max-w-xl">
+            <!-- Big Bold Heading (Executive Managing Director Branding) -->
+            <div class="mb-2 sm:mb-4">
+              <h1 class="hero-heading font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight text-white leading-[1.03] mb-3">
+                Managing<br>
+                <span class="text-amber-400">Director</span>
+              </h1>
+              <p class="font-display font-bold text-base sm:text-lg lg:text-xl text-white tracking-wide uppercase mb-1.5 drop-shadow">
+                ANURAG TIWARI &bull; <span class="text-amber-400 font-semibold">M/s M.S. Construction</span>
+              </p>
+              <p class="font-jost text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3 text-amber-300 drop-shadow">
+                Civil Engineer &bull; M.Tech (Construction Management) &bull; KIIT Alumnus
+              </p>
+              <p class="text-slate-200 text-xs sm:text-sm lg:text-base font-normal leading-relaxed drop-shadow-md">
+                Directing high-capacity highway construction, road development, railway infrastructure, and large-scale infrastructure projects across India with technical precision and disciplined execution.
+              </p>
             </div>
           </div>
+        </div>
 
-          <!-- Reference-Inspired 4 Frosted Blur Glass Stat Cards (Bottom Row) -->
-          <div class="mt-auto pt-2">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-2.5 sm:mb-4">
-              
-              <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
-                <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-amber-400 block mb-0.5">M.Tech</span>
-                <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Construction Management</span>
-                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Advanced Planning &amp; Execution</span>
-              </div>
-
-              <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
-                <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-white block mb-0.5">KIIT</span>
-                <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Civil Engineering</span>
-                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Rigorous Academic Foundation</span>
-              </div>
-
-              <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
-                <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-amber-400 block mb-0.5">5+</span>
-                <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Core Infrastructure Sectors</span>
-                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Highways, Rail, Real Estate &amp; Govt</span>
-              </div>
-
-              <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
-                <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-white block mb-0.5">Jharkhand</span>
-                <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Medininagar, Palamu</span>
-                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">India Infrastructure Growth</span>
-              </div>
-
+        <!-- Reference-Inspired 4 Frosted Blur Glass Stat Cards (Bottom Row) -->
+        <div class="mt-auto pt-2">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 mb-2.5 sm:mb-4">
+            
+            <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
+              <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-amber-400 block mb-0.5">M.Tech</span>
+              <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Construction Management</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Advanced Planning &amp; Execution</span>
             </div>
 
-            <!-- Subtle Elegant Scroll Down Indicator -->
-            <div class="flex items-center justify-center pt-2">
-              <a href="#about" class="scroll text-amber-400/80 hover:text-amber-300 transition-colors p-1" aria-label="Scroll to About Me">
-                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 animate-pulse">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="8 12 12 16 16 12"></polyline>
-                  <line x1="12" y1="8" x2="12" y2="16"></line>
-                </svg>
-              </a>
+            <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
+              <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-white block mb-0.5">KIIT</span>
+              <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Civil Engineering</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Rigorous Academic Foundation</span>
             </div>
+
+            <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
+              <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-amber-400 block mb-0.5">5+</span>
+              <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Core Infrastructure Sectors</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">Highways, Rail, Real Estate &amp; Govt</span>
+            </div>
+
+            <div class="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/10 text-left bg-slate-950/60 backdrop-blur-xl hover:border-amber-400/40 transition-all">
+              <span class="text-2xl sm:text-3xl lg:text-4xl font-display font-black text-white block mb-0.5">Jharkhand</span>
+              <span class="font-jost text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-200 block">Medininagar, Palamu</span>
+              <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 block">India Infrastructure Growth</span>
+            </div>
+
           </div>
 
+          <!-- Subtle Elegant Scroll Down Indicator -->
+          <div class="flex items-center justify-center pt-2">
+            <a href="#about" class="scroll text-amber-400/80 hover:text-amber-300 transition-colors p-1" aria-label="Scroll to About Me">
+              <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 animate-pulse">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 12 16 16 12"></polyline>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+              </svg>
+            </a>
+          </div>
         </div>
 
       </div>
