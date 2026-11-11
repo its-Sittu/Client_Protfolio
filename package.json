@@ -1,0 +1,10 @@
+{
+  "name": "anurag-tiwari-portfolio",
+  "version": "1.0.0",
+  "description": "Premium Corporate & Infrastructure Engineering Portfolio for Anurag Tiwari",
+  "type": "module",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "node dev-server.js"
+  }
+}
