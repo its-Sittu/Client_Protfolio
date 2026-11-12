@@ -640,14 +640,10 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // ==================== EMAILJS CONFIGURATION ====================
-  // 1. emailjs.com par free account banayein
-  // 2. Gmail service connect karein -> SERVICE_ID copy karein
-  // 3. Email Template banayein -> TEMPLATE_ID copy karein
-  // 4. Account Settings se PUBLIC_KEY copy karein
   const EMAILJS_CONFIG = {
-    SERVICE_ID: 'YOUR_SERVICE_ID',     // e.g. 'service_xxxxxxx'
-    TEMPLATE_ID: 'YOUR_TEMPLATE_ID',   // e.g. 'template_xxxxxxx'
-    PUBLIC_KEY: 'YOUR_PUBLIC_KEY'      // e.g. 'xxxxxxx_xxxxxx'
+    SERVICE_ID: 'service_fd381nr',
+    TEMPLATE_ID: 'template_i5y9lhm',
+    PUBLIC_KEY: 'HU4ARbeCL2gCuFZPh'
   };
 
   // Initialize EmailJS if public key is provided
